@@ -2,15 +2,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     let token = '';
 
     try {
-        const tokenResponse = await fetch('https://cors-anywhere.herokuapp.com/https://chatgpt-au.vulcanlabs.co/api/v1/token', {
+        const tokenResponse = await fetch('https://cors-anywhere.herokuapp.com/https://api.vulcanlabs.co/smith-auth/api/v1/token', {
             method: 'POST',
             headers: {
+				'Host': 'api.vulcanlabs.co',
                 'Content-Type': 'application/json',
-                'user-agent': 'Chat Smith Android, Version 3.8.3(637)',
+                'user-agent': 'Chat Smith Android, Version 3.9.3(658)',
                 'accept': 'application/json',
             },
             body: JSON.stringify({
-                device_id: "57C8AC7D51346473",
+                device_id: "58E287652DEF8987",
                 order_id: "",
                 product_id: "",
                 purchase_token: "",
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     'authorization': `Bearer ${token}`,
                     'accept': 'application/json',
                     'Content-Type': 'application/json; charset=utf-8',
-                    'user-agent': 'Chat Smith Android, Version 3.8.3(637)',
+                    'user-agent': 'Chat Smith Android, Version 3.9.3(658)',
                 },
                 body: JSON.stringify({
                     model: 'gpt-4o',
